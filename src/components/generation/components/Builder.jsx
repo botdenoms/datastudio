@@ -60,12 +60,12 @@ export default function Builder() {
             {/* Controls */}
             {
                 init && cols.length > 3 && 
-                <BuildActions cols={cols}/>
+                <BuildActions cols={cols} setData={setRows} feedBack={setbuildSuc}/>
             }
             {/* Data Table from cols as header with rows as data */}
             {
                 buildSuc && 
-                <DataTable/>
+                <DataTable cols={cols} rows={rows}/>
             }
         </div>
     )

@@ -16,6 +16,8 @@ export default function ColGenerator({title='', add=false, reset=false, clear=fa
             return
         }
         add({colName, colType})
+        setColName('')
+        setColType(1)
     }
 
     return (

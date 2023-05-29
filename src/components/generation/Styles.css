@@ -186,7 +186,7 @@ select{
     margin: 5px 0;
     width: 100%;
 }
-.col-details{
+.col-details, .col-data{
     display: flex;
     flex-direction: column;
     margin: 2px;
@@ -216,4 +216,29 @@ select{
     border-radius: 5px;
     color: #FFF;
     background: #166e16;
-} 
+}
+.tb-header, .tb-row{
+    margin: 2px 0;
+    display: flex;
+    overflow-x: auto;
+}
+.col-data span{
+    background: #083c53;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    color: #FFF;
+}
+.tb-header span{
+    background: #00bfff;
+}
+.exports button{
+    margin: 2px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    background: #0c0a14;
+}
