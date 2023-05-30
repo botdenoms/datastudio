@@ -65,7 +65,7 @@ export default function Builder() {
             {/* Data Table from cols as header with rows as data */}
             {
                 buildSuc && 
-                <DataTable cols={cols} rows={rows}/>
+                <DataTable title={title} cols={cols} rows={rows}/>
             }
         </div>
     )
