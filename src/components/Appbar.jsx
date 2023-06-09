@@ -4,22 +4,11 @@ import '../styles/Appbar.css'
 
 import logo from '../logo.svg'
 
-export default function Appbar() {
+export default function Appbar({tabs=[], navigator=false, active=0}) {
 
-    const tabs = [
-        'Generation', 
-        'Cleaning',
-        'Transformation',
-        'Visualization',
-        'Modelling',
-        'Migration',
-        'Storage',
-    ]
     const [user, setUser] = useState(null)
     const [more, setMore] = useState(false)
     const [options, setOptions] = useState(false)
-    const [tab, setTab] = useState(0)
-
 
     const accounts = ()=>{
         if (user === null) {
@@ -43,7 +32,11 @@ export default function Appbar() {
 
     const navigation = (index)=>{
         // handle content tab switch
-        setTab(index)
+        if (navigator === false){
+            alert('Navigation need to be implemented')
+            return
+        }
+        navigator(index)
     }
 
     return (
@@ -77,7 +70,7 @@ export default function Appbar() {
                 {
                     tabs.map((v, i) => {
                         var clsName = ''
-                        if (i === tab) {
+                        if (i === active) {
                             clsName = 'active'
                         }
                         return (<span key={i} className={clsName} onClick={()=>navigation(i)}>{v}</span>)
