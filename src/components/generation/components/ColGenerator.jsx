@@ -33,7 +33,7 @@ export default function ColGenerator({title='', add=false, reset=false, clear=fa
                     <option value={4}>Double</option>
                     <option value={5}>Text</option>
                     <option value={6}>UUID</option>
-                    <option value={7}>Gender</option>
+                    <option value={7}>Boolean</option>
                     <option value={8}>Time</option>
                     <option value={9}>Date</option>
                     <option value={10}>DateTime</option>
@@ -44,8 +44,7 @@ export default function ColGenerator({title='', add=false, reset=false, clear=fa
                     <option value={15}>Image</option>
                     <option value={16}>Audio</option>
                     <option value={17}>Video</option>
-                    <option value={18}>Binary</option>
-                    <option value={19}>File</option>
+                    <option value={18}>File</option>
                 </select>
             </div>
             <button onClick={()=>addAction()}>Add</button>

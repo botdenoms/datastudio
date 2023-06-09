@@ -40,6 +40,10 @@ export default function DataTable({title='',cols=[], rows=[[]]}) {
         }
     }
 
+    const sendTo = (tab)=>{
+        alert(`send to : ${tab}`)
+    }
+
     return (
         <div>
             <table>
@@ -77,11 +81,22 @@ export default function DataTable({title='',cols=[], rows=[[]]}) {
                 }
             </table>
             <div className='exports'>
-                <button onClick={()=> downloadTable(0)}>csv</button>
-                <button onClick={()=> downloadTable(1)}>tsv</button>
-                <button onClick={()=> downloadTable(2)}>pandas</button>
-                <button onClick={()=> downloadTable(3)}>xml</button>
-                <button onClick={()=> downloadTable(4)}>docs</button>
+                <div>
+                    Send to:
+                    <button onClick={()=> sendTo(1)}>Cleaning</button>
+                    <button onClick={()=> sendTo(2)}>Transformation</button>
+                    <button onClick={()=> sendTo(3)}>Visualization</button>
+                    <button onClick={()=> sendTo(4)}>Modelling</button>
+                    <button onClick={()=> sendTo(5)}>Storage</button>
+                </div>
+                <div>
+                    Download:
+                    <button onClick={()=> downloadTable(0)}>csv</button>
+                    <button onClick={()=> downloadTable(1)}>tsv</button>
+                    <button onClick={()=> downloadTable(2)}>pandas</button>
+                    <button onClick={()=> downloadTable(3)}>xml</button>
+                    <button onClick={()=> downloadTable(4)}>docs</button>
+                </div>
             </div>
         </div>
     )

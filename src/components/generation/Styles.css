@@ -228,6 +228,7 @@ select{
 }
 table{
     margin: 5px 0;
+    overflow-x: auto;
 }
 tr{
     padding: 5px;
@@ -245,4 +246,7 @@ th{
     align-items: center;
     padding: 5px;
     color: #FFF;
+}
+.exports div{
+    margin: 5px;
 }
